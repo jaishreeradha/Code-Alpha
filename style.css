@@ -1,49 +1,53 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-#calc {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-#content {
-    background: #2c302c;
-    padding: 20px;
-    border-radius: 10px;
+.gallery {
+     display: grid;
+     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+     gap: 10px;
+     padding: 20px;
+ }
 
-}
-#content form input {
-    border: 0;
-    outline: 0;
-    width: 50px;
-    height: 50px;
-    border-radius: 8px;
-    font-size: 15px;
-    margin: 10px;
-    cursor: pointer;
-}
-#backspace {
-    background-color: rgb(237, 89, 30);
-    color: white;
-}
-#res {
-    padding: 10px;
-}
-#clear {
-    background-color: rgb(237, 89, 30);
-    color: white;
-}
-form #output {
-    display: flex;
-    justify-content: flex-end;
-    margin: 15px 0;
-}
-form #output input {
-    text-align: right;
-    flex: 1;
-    font-size: 25px;
-}
+ .gallery-item {
+     overflow: hidden;
+ }
+
+ .gallery-item img {
+     width: 100%;
+     height: auto;
+     display: block;
+ }
+
+ .modal {
+     display: none;
+     position: fixed;
+     z-index: 1;
+     padding-top: 100px;
+     left: 0;
+     top: 0;
+     width: 100%;
+     height: 100%;
+     overflow: auto;
+     background-color: rgba(0, 0, 0, 0.9);
+ }
+
+ .modal-content {
+     margin: auto;
+     display: block;
+     max-width: 90%;
+     max-height: 90%;
+ }
+
+ .close {
+     position: absolute;
+     top: 15px;
+     right: 35px;
+     color: #f1f1f1;
+     font-size: 40px;
+     font-weight: bold;
+     transition: 0.3s;
+ }
+
+ .close:hover,
+ .close:focus {
+     color: #bbb;
+     text-decoration: none;
+     cursor: pointer;
+ }
